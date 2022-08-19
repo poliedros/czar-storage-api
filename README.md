@@ -1,4 +1,4 @@
-# api-gateway
+# czar-storage-api
 
 <a></a><img src="https://img.shields.io/github/workflow/status/poliedros/api-gateway/test%20code" alt="Github Actions" /></a>
 <a>[![Coverage Status](https://coveralls.io/repos/github/poliedros/api-gateway/badge.svg?branch=main)](https://coveralls.io/github/poliedros/api-gateway?branch=main)</a>
