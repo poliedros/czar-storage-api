@@ -11,6 +11,7 @@ import {
   UseGuards,
   Request,
   Query,
+  CacheTTL,
 } from '@nestjs/common';
 import { ClientProxy } from '@nestjs/microservices';
 import { UpdateItemDto } from './dto/update-item.dto';
@@ -30,6 +31,7 @@ export class ItemsController {
   }
 
   @Get()
+  @CacheTTL(10)
   async findAll(@Query() query) {
     let { storage_id } = query;
 
@@ -39,6 +41,7 @@ export class ItemsController {
   }
 
   @Get(':id')
+  @CacheTTL(5)
   async findOne(@Param('id') id: string) {
     return this.itemsServiceProxy.send({ items: 'find' }, { id });
   }
