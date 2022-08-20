@@ -1,5 +1,5 @@
 {
-  "name": "api-gateway",
+  "name": "czar-storage-api",
   "version": "1.0.0",
   "description": "",
   "author": "",
@@ -8,7 +8,7 @@
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "nest build",
-    "build:docker": "docker buildx build --platform linux/amd64,linux/arm64 -t carloszan/api-gateway:v1 --push .",
+    "build:docker": "docker buildx build --platform linux/amd64,linux/arm64 -t carloszan/czar-storage-api:v1 --push .",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
     "start:dev": "nest start --watch",
