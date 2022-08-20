@@ -5,7 +5,7 @@
 
 ## Description
 
-Api gateway is the facade api for projects
+Czar Storage api gateway
 
 ## Auth
 
