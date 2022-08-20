@@ -10,6 +10,7 @@ import {
   Post,
   UseGuards,
   Request,
+  Query,
 } from '@nestjs/common';
 import { ClientProxy } from '@nestjs/microservices';
 import { UpdateItemDto } from './dto/update-item.dto';
@@ -29,8 +30,12 @@ export class ItemsController {
   }
 
   @Get()
-  async findAll() {
-    return this.itemsServiceProxy.send({ items: 'findall' }, {});
+  async findAll(@Query() query) {
+    let { storage_id } = query;
+
+    if (!storage_id) storage_id = '';
+
+    return this.itemsServiceProxy.send({ items: 'findall' }, storage_id);
   }
 
   @Get(':id')
